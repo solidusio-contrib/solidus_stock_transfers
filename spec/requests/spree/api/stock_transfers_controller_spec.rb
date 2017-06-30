@@ -2,7 +2,6 @@ require 'spec_helper'
 
 module Spree
   describe Api::StockTransfersController do
-    render_views
 
     let!(:stock_transfer) { create(:stock_transfer_with_items) }
     let(:transfer_item)   { stock_transfer.transfer_items.first }
