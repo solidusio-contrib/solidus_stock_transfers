@@ -1,0 +1,71 @@
+---
+en:
+  activerecord:
+    attributes:
+      spree/stock_transfer:
+        created_at: Created At
+        created_by_id: Created By
+        description: Description
+        destination_location_id: Destination Location
+        finalized_at: Finalized At
+        finalized_by_id: Finalized By
+        number: Transfer Number
+        shipped_at: Shipped At
+        source_location_id: Source Location
+        tracking_number: Tracking Number
+    models:
+      spree/stock_transfer:
+        one: Stock Transfer
+        other: Stock Transfers
+      spree/transfer_item:
+        one: Transfer Item
+        other: Transfer Items
+  spree:
+    admin:
+      tab:
+        stock_transfers: Stock Transfers
+      stock_transfers:
+        create_additional_stock_location: Create additional stock locations.
+        create_new_stock_transfer: Create a new stock transfer.
+        no_stock_locations_found: More than one stock location must be set to transfer
+          stock.
+    are_you_sure_ship_stock_transfer: Are you sure you want to ship this stock transfer?
+    back_to_stock_transfers_list: Back to Stock Transfers List
+    close_stock_transfer:
+      confirm: |-
+        Are you sure you want to close this stock transfer?
+
+        Stock levels will be changed for the received items and you will no longer be able to edit the stock transfer.
+    editing_stock_transfer: Editing Stock Transfer
+    errors:
+      messages:
+        cannot_modify_transfer_item_closed_stock_transfer: Transfer items that are
+          part of a closed stock transfer cannot be modified.
+        cannot_delete_finalized_stock_transfer: Finalized stock transfers cannot be
+          destroyed.
+        cannot_delete_transfer_item_with_finalized_stock_transfer: Transfer items
+          that are part of a finalized stock transfer cannot be destroyed.
+        cannot_update_expected_transfer_item_with_finalized_stock_transfer: The expected
+          quantity cannot be updated on transfer items that are part of a finalized
+          stock transfer.
+        transfer_item_insufficient_stock: Transfer item's variant does not have enough
+          stock in the stock transfer's source location
+    finalize_stock_transfer:
+      confirm: |-
+        Are you sure you want to finalize this stock transfer?
+
+        You will no longer be able to add or edit any transfer items
+    item_not_in_stock_transfer: Item is not part of the stock transfer
+    new_stock_transfer: New Stock Transfer
+    ship_stock_transfer:
+      confirm: |-
+        Are you sure you want to mark this stock transfer as shipping?
+
+        You will no longer be able to make changes to the stock transfer
+    stock_transfer: Stock Transfer
+    stock_transfer_cannot_be_finalized: Stock transfer cannot be finalized
+    stock_transfer_complete: Stock Transfer Complete
+    stock_transfer_must_be_receivable: Stock transfer must be closed and shipped
+    stock_transfers: Stock Transfers
+    transfer_items: Transfer Items
+    unable_to_create_stock_transfer: Unable to create the stock transfer
