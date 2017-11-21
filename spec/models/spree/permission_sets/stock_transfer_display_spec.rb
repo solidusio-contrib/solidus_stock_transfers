@@ -1,4 +1,4 @@
-require 'rails_helper'
+require 'spec_helper'
 
 RSpec.describe Spree::PermissionSets::StockTransferDisplay do
   let(:ability) { DummyAbility.new }

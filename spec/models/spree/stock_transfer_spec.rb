@@ -1,4 +1,4 @@
-require 'rails_helper'
+require 'spec_helper'
 
 module Spree
   RSpec.describe StockTransfer, type: :model do

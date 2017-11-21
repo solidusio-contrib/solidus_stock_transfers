@@ -1,4 +1,4 @@
-require 'rails_helper'
+require 'spec_helper'
 
 RSpec.describe Spree::TransferItem do
   let(:stock_location) { create(:stock_location, name: "Warehouse") }
