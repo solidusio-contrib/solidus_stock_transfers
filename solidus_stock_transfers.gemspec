@@ -18,7 +18,6 @@ Gem::Specification.new do |s|
 
   s.add_dependency 'solidus_backend', ['>= 2.5.x', '< 3']
   s.add_dependency 'solidus_support'
-  s.add_dependency 'deface'
 
   s.add_development_dependency 'capybara'
   s.add_development_dependency 'ffaker'

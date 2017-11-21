@@ -11,6 +11,4 @@ group :development, :test do
   gem "pry-rails"
 end
 
-gem 'deface', require: false
-
 gemspec
