@@ -1,6 +1,7 @@
+require 'solidus_backend'
+
 module SolidusStockTransfers
   class Engine < Rails::Engine
-    require 'spree/core'
     isolate_namespace Spree
     engine_name 'solidus_stock_transfers'
 
@@ -9,12 +10,14 @@ module SolidusStockTransfers
       g.test_framework :rspec
     end
 
-    def self.activate
-      Dir.glob(File.join(File.dirname(__FILE__), '../../app/**/*_decorator*.rb')) do |c|
-        Rails.configuration.cache_classes ? require(c) : load(c)
+    initializer "add_stock_transfer_menu_item" do
+      Spree::Backend::Config.configure do |config|
+        config.menu_items << config.class::MenuItem.new(
+          [:stock_transfers],
+          'exchange',
+          url: :admin_stock_transfers_path
+        )
       end
     end
-
-    config.to_prepare(&method(:activate).to_proc)
   end
 end
