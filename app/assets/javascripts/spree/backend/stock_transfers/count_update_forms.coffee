@@ -1,3 +1,5 @@
+#= require spree/backend/number_field_updater
+
 class CountUpdateForms
   @beginListening: (isReceiving) ->
     # Edit
