@@ -4,6 +4,8 @@ module Spree
   describe Admin::StockTransfersController, type: :controller do
     stub_authorization!
 
+    routes { Spree::Core::Engine.routes }
+
     let(:warehouse) { StockLocation.create(name: "Warehouse") }
     let(:ny_store) { StockLocation.create(name: "NY Store") }
     let(:la_store) { StockLocation.create(name: "LA Store") }

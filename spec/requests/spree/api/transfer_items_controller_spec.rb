@@ -1,7 +1,11 @@
 require 'spec_helper'
+require 'spree/api/testing_support/setup'
+require 'spree/api/testing_support/helpers'
 
 module Spree
   describe Api::TransferItemsController do
+    extend Spree::Api::TestingSupport::Setup
+    include Spree::Api::TestingSupport::Helpers
 
     let!(:stock_transfer) { create(:stock_transfer_with_items) }
     let(:transfer_item)   { stock_transfer.transfer_items.first }
