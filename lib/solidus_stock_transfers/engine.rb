@@ -12,7 +12,9 @@ module SolidusStockTransfers
 
     initializer "add_stock_transfer_menu_item" do
       Spree::Backend::Config.configure do |config|
-        config.menu_items << config.class::MenuItem.new(
+        # Insert after "stock", if that exists
+        idx = (config.menu_items.index { |item| item.label == :stock } || -2) + 1
+        config.menu_items.insert idx, config.class::MenuItem.new(
           [:stock_transfers],
           'exchange',
           url: :admin_stock_transfers_path
