@@ -1,6 +1,8 @@
 module Spree
   module Api
     class StockTransfersController < Spree::Api::BaseController
+      helper 'solidus_stock_transfers/api'
+
       def receive
         authorize! :update, TransferItem
         @stock_transfer = Spree::StockTransfer.accessible_by(current_ability, :update).find_by!(number: params[:id])

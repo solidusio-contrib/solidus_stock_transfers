@@ -1,6 +1,8 @@
 module Spree
   module Api
     class TransferItemsController < Spree::Api::BaseController
+      helper 'solidus_stock_transfers/api'
+
       def create
         authorize! :create, TransferItem
         stock_transfer = Spree::StockTransfer.accessible_by(current_ability, :update).find_by(number: params[:stock_transfer_id])
@@ -36,6 +38,10 @@ module Spree
 
       def transfer_item_params
         params.require(:transfer_item).permit(permitted_transfer_item_attributes)
+      end
+
+      def permitted_transfer_item_attributes
+        [:variant_id, :expected_quantity, :received_quantity]
       end
     end
   end
