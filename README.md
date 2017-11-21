@@ -16,6 +16,8 @@ isn't necessary, and settings the stock levels manually will be sufficient.
 This interface requires jumping through some hoops and an unpleasant interface
 in order to be strict about and have a record of the transfer occurring.
 
+![](preview.png)
+
 Installation
 ------------
 
