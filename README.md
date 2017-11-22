@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/solidusio-contrib/solidus_stock_transfers.svg?branch=master)](https://travis-ci.org/solidusio-contrib/solidus_stock_transfers)
+
 > _This extension provides the stock transfers interface which was extracted
 > from Solidus 2.5 due to not being widely used and (as a result) not receiving
 > the improvements it needs._
