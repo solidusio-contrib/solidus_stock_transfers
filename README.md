@@ -13,7 +13,7 @@ Solidus Stock Transfers
 
 This extension provides an admin interface to transfer stock between two
 locations. For most users, even with multiple stock locations, this extension
-isn't necessary, and settings the stock levels manually will be sufficient.
+isn't necessary, and setting the stock levels manually will be sufficient.
 
 This interface requires jumping through some hoops and an unpleasant interface
 in order to be strict about and have a record of the transfer occurring.
