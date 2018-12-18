@@ -17,6 +17,7 @@ module SolidusStockTransfers
         config.menu_items.insert idx, config.class::MenuItem.new(
           [:stock_transfers],
           'exchange',
+          condition: -> { can?(:admin, Spree::StockTransfer) },
           url: :admin_stock_transfers_path
         )
       end
